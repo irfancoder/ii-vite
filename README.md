@@ -12,7 +12,9 @@ ii-vite (short for irfanismail's vite), is an opinionated boilerplate to build a
 * Standard Version
 * Eslint (Standard & Vue Essential)
 
-That's all. Thanks for dropping by~
+That's all. To get started, click 'Use this template' & happy building!
+
+
 
 ## Author
 
