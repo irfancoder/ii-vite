@@ -3,3 +3,5 @@
  *
  * export { default as LayoutName } from './layout-name.vue'
  */
+
+export { default as Guest } from './guest.vue'

@@ -3,3 +3,5 @@
  *
  * export { default as PageName } from './page-name.vue'
  */
+
+export { default as Home } from './home.vue'

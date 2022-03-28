@@ -1,41 +1,17 @@
-<script setup>
-</script>
-
 <template>
-    <div id="app">
-        <p>ii-vite stands for irfan ismail's vite.</p>
-        <p>This boilerplate is equipped with:</p>
-
-        <ul class="p-8 list-disc">
-            <li>Vue 3</li>
-            <li>Vue Layout</li>
-            <li>Vue Router</li>
-            <li>Pinia</li>
-            <li>Sass</li>
-            <li>TailwindCSS</li>
-            <li>Vite</li>
-
-            <li>Standard Version</li>
-        </ul>
-    </div>
+    <component :is="layout">
+        <router-view />
+    </component>
 </template>
 
 <script>
+import { useLayout } from '@irfanismail/vue-layout'
+import { useRoute } from 'vue-router'
+
 export default {
-    data () {
-        return {
-            key: 'value'
-        }
+    setup () {
+        const { layout } = useLayout(useRoute())
+        return { layout }
     }
 }
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top: 60px;
-    @apply container mx-auto p-16;
-}
-</style>

@@ -1,34 +1,15 @@
 /** @format */
 
 import { createRouter, createWebHistory } from 'vue-router'
-// import * as Layout from '@/layouts'
-// import * as Pages from '@/pages'
+import HomeRoutes from './includes/home'
 
-// const {  } = Layout
-// const {  } = Pages
-
-// const routes = [
-//     {
-//         path: '/',
-//         component: Home,
-//         name: 'home:index',
-//         meta: {
-//             layout: [Master]
-//         }
-//     },
-//     {
-//         path: '/login',
-//         component: Login,
-//         name: 'auth:login:index',
-//         meta: {
-//             layout: [Master]
-//         }
-//     }
-// ]
+const routes = [
+    ...HomeRoutes
+]
 
 const router = createRouter({
     history: createWebHistory(),
-    // routes: routes,
+    routes: routes,
     scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {
             return savedPosition
